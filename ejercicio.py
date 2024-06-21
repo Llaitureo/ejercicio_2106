@@ -9,8 +9,13 @@ while True:
     print('opc.3 = mostrar ventas realizadas.')
     print('opc.4 = generar archivo csv.')
     print('opc.5 = salir.')
-
-    opc = int(input('ingrese opción: '))
+    while True:
+        try:
+            opc = int(input('ingrese opción: '))
+            if opc in (1,2,3,4,5):
+                break
+        except:
+            print('digitos.')
 
     if opc==1:
         opc_1()
