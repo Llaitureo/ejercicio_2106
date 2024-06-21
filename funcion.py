@@ -53,30 +53,17 @@ def opc_2():
             print('digitos enteros.')
     
     opc_1()
-    while True:
-        try:
-            fila =  int(input('\ningrese la fila del asiento: '))
-            if fila>=0:
-                break
-            else:
-                    print('no números negativos.')
-        except:
-            print('numeros.')
-        while True:
-            try:
-                asiento = int(input('ingrese el asiento del asiento: '))
-                if fila>=0:
-                    break
-                else:
-                    print('no números negativos.')
-            except:
-                print('numeros.')
+    
+    fila =  float(input('\ningrese la fila del asiento: '))  
+    asiento = float(input('ingrese el asiento del asiento: '))
+                
     fila1= fila-1
     asiento1 = asiento-1
     if bus[fila1][asiento1]=="o":
         bus[fila1][asiento1]="x"
     else:
         print('está ocupado.')
+        
     print('se compró el asiento con éxito.')
     persona ={"nombre":nombre,
               "edad":edad,
@@ -92,7 +79,7 @@ def opc_3 ():
             print('no hay nada..')
         else:
             for  z in personas:
-                print(f"NOMBRE : {z["nombre"]}")
+                print(f"\nNOMBRE : {z["nombre"]}")
                 print(f"EDAD: {z["edad"]}")
                 print(f"TELÉFONO: {z["fono"]}")
                 print(f'PAGO BUS: {z["pago"]}')
