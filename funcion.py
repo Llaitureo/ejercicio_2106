@@ -25,7 +25,7 @@ def opc_2():
             print("carácteres, más de 3 letras.")
     while True:
         try:
-            edad =  int(input('ingresa nombre del comprador: '))
+            edad =  int(input('ingresa la edad del comprador: '))
             if edad==0 or edad<0:
                 print('valor positivo, porfavor (a menos que el comprador no exista..)')
             else:
@@ -53,8 +53,24 @@ def opc_2():
             print('digitos enteros.')
     
     opc_1()
-    fila =  int(input('\ningrese la fila del asiento: '))
-    asiento = int(input('ingrese el asiento del asiento: '))
+    while True:
+        try:
+            fila =  int(input('\ningrese la fila del asiento: '))
+            if fila>=0:
+                break
+            else:
+                    print('no números negativos.')
+        except:
+            print('numeros.')
+        while True:
+            try:
+                asiento = int(input('ingrese el asiento del asiento: '))
+                if fila>=0:
+                    break
+                else:
+                    print('no números negativos.')
+            except:
+                print('numeros.')
     fila1= fila-1
     asiento1 = asiento-1
     if bus[fila1][asiento1]=="o":
